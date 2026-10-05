@@ -1,3 +1,49 @@
-h1 {
-    background-color: blue;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+main {
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+}
+
+.logo_section {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    background-image:url(img/is-he-a-corn-addict-v0-7icsgy8fprtc1.png) ;
+}
+
+.logo_box {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.logo_box img {
+    width: 20%;
+}
+
+.logo_box p {
+    font-size: 70px;
+}
+
+.credits {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    align-self: center;
+}
+
+.sign_up_section {
+    width: 100%;
 }

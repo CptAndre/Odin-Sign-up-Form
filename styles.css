@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Norse Bold; 
+  src: url(font/Norsebold.otf); 
+}
+
 body,
 main {
     height: 100vh;
@@ -17,8 +22,17 @@ main {
     display: flex;
     flex-direction: column;
     width: 1000px;
-    background-image:url(img/is-he-a-corn-addict-v0-7icsgy8fprtc1.png) ;
+    background-image:url(img/andrei-r-popescu-mmaOKxzGXeA-unsplash.jpg) ;
+    background-size: cover;
+    background-position: center;
 }
+
+.logo_section p , a{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
 
 .logo_box {
     margin-top: 250px;
@@ -35,7 +49,8 @@ main {
 }
 
 .logo_box p {
-    font-size: 70px;
+    font-size:120px;
+    font-family: Norse Bold;
 }
 
 .credits {

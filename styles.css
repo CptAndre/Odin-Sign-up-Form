@@ -16,6 +16,7 @@ main {
 
 .main {
     display: flex;
+    background-color: white;
 }
 
 .logo_section {
@@ -27,7 +28,12 @@ main {
     background-position: center;
 }
 
-.logo_section p , a{
+.logo_section p {
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo_section a{
     color: white;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -74,17 +80,18 @@ main {
 
 
 .intro p {
-    font-size: 32px;
+    font-size: 30px;
     margin-top: 10px;
     margin-bottom: 30px;
     font-weight: 600;
+    width:800px;
 }
 
 .sign_up {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-color: aqua;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) ;
 }
 
 .sign_up p{
@@ -95,14 +102,19 @@ main {
 .form_box {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 30px;
+    gap: 20px 100px;
     width: 70%;
+}
+
+.form_box label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .input_type {
     display: flex;
     flex-direction: column;
     width: 280px;
+    gap:10px;
 }
 
 .input_type input {
@@ -110,6 +122,8 @@ main {
     height: 35px;
     padding: 5px;
     box-sizing: border-box;
+    border-radius: 5px;
+    border-style:groove;
 }
 
 .button_confirm {
@@ -120,6 +134,18 @@ main {
 }
 
 .button_confirm button {
-    width: 150px;
+    width: 200px;
+    height: 50px;
     padding: 10px 20px;
+    background-color: #596D48;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) 
+}
+
+.button_confirm a{
+    color: #596D48;
+    text-decoration: none;
 }

@@ -15,7 +15,7 @@
         <section class="logo_section">
 
             <div class="logo_box">
-                <img src="./img/odin-lined.png">
+                <img src="./img/odin-lined.png" alt="">
                 <p>Odin</p>
             </div>
 
@@ -40,36 +40,37 @@
             <div class="sign_up">
 
                 <p>Let's do this!</p>
-                <form class="form_box">
+                <form class="form_box" id="form_box" action="#" method="POST" onsubmit="event.preventDefault();">
 
                     <div class="input_type">
-                        <label for="first_name">First Name:</label>
-                        <input type="text">
+                        <label for="first_name">First Name: *</label>
+                        <input type="text" id="first_name" placeholder="Thor" name="first_name" autocomplete="given-name" required>
                     </div>
 
                     <div class="input_type">
-                        <label for="last_name">Last Name:</label>
-                        <input type="text">
+                        <label for="last_name">Last Name: *</label>
+                        <input type="text" id="last_name" placeholder="Odinson" name="last_name" autocomplete="family-name" required>
                     </div>
 
                     <div class="input_type">
-                        <label for="email">Email:</label>
-                        <input type="email">
+                        <label for="email">Email: *</label>
+                        <input type="email" id="email" placeholder="thorodinson@email.com" name="email" autocomplete="email" required>
                     </div>
 
                     <div class="input_type">
-                        <label for="number">Phone Number:</label>
-                        <input type="number">
+                        <label for="phone_number">Phone Number: *</label>
+                        <input type="tel" id="phone_number" name="phone_number" autocomplete="tel" required>
                     </div>
 
                     <div class="input_type">
-                        <label for="password">Password:</label>
-                        <input type="password">
+                        <label for="password">Password: *</label>
+                        <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" aria-describedby="password_hint" required>
+                        <small id="password_hint">Use at least 8 characters.</small>
                     </div>
 
                     <div class="input_type">
-                        <label for="passwordConfirm">Confirm Password:</label>
-                        <input type="password">
+                        <label for="passwordConfirm">Confirm Password: *</label>
+                        <input type="password" id="passwordConfirm" name="passwordConfirm" autocomplete="new-password" minlength="8" aria-describedby="password_hint" required>
                     </div>
                     
 
@@ -78,8 +79,8 @@
 
             <div class="button_confirm">
 
-                <button>Create Account</button>
-                <p>Already have an account? <a href="">Log in</a></p>
+                <button form="form_box" type="submit">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
 
             </div>
 

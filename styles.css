@@ -11,7 +11,7 @@
 
 body,
 main {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .main {
@@ -22,7 +22,8 @@ main {
 .logo_section {
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    flex: 0 0 35%;
+    min-width: 0;
     background-image:url(img/andrei-r-popescu-mmaOKxzGXeA-unsplash.jpg) ;
     background-size: cover;
     background-position: center;
@@ -41,7 +42,7 @@ main {
 
 
 .logo_box {
-    margin-top: 250px;
+    margin-top: clamp(80px, 23vh, 250px);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -52,18 +53,19 @@ main {
 
 .logo_box img {
     width: 20%;
+    max-width: 100px;
 }
 
 .logo_box p {
-    font-size:120px;
+    font-size: clamp(56px, 6.25vw, 120px);
     font-family: Norse Bold;
 }
 
 .credits {
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
     padding: 15px;
     align-self: center;
+    text-align: center;
 }
 
 .sign_up_section {
@@ -71,11 +73,13 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 80px;
+    flex: 1;
+    min-width: 0;
 }
 
 .intro,.sign_up,.button_confirm{
-      padding: 40px;
+    width: 100%;
+    padding: 32px 40px;
 }
 
 
@@ -84,7 +88,7 @@ main {
     margin-top: 10px;
     margin-bottom: 30px;
     font-weight: 600;
-    width:800px;
+    max-width: 800px;
 }
 
 .sign_up {
@@ -102,8 +106,9 @@ main {
 .form_box {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 100px;
-    width: 70%;
+    gap: 20px clamp(24px, 5vw, 100px);
+    width: 100%;
+    max-width: 660px;
 }
 
 .form_box label{
@@ -113,7 +118,9 @@ main {
 .input_type {
     display: flex;
     flex-direction: column;
-    width: 280px;
+    flex: 1 1 240px;
+    min-width: 0;
+    max-width: 280px;
     gap:10px;
 }
 
@@ -123,7 +130,13 @@ main {
     padding: 5px;
     box-sizing: border-box;
     border-radius: 5px;
-    border-style:groove;
+    border: 1px solid #E5E7EB;
+}
+
+.input_type small {
+    color: #4b5563;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
 }
 
 .button_confirm {
@@ -142,10 +155,48 @@ main {
     font-weight: 600;
     border-style: none;
     border-radius: 7px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+input:user-valid {
+  border-color: green;
+}
+
+input:user-invalid {
+  border-color: red;
+}
+
+.input_type input:focus {
+    border-color: #2563eb;
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    box-shadow: 0 2px 5px rgba(37, 99, 235, 0.2);
 }
 
 .button_confirm a{
     color: #596D48;
     text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .logo_section {
+        flex: none;
+        min-height: 280px;
+    }
+
+    .logo_box {
+        margin-top: 48px;
+    }
+
+    .intro,.sign_up,.button_confirm {
+        padding: 24px;
+    }
+
+    .intro p {
+        font-size: 24px;
+    }
 }
